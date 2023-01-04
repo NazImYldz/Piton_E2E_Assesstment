@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="16" time="118.456">
-    <testcase classname="Login Module" name="TC01_User should see login Form if not authenticated" time="8.232">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="18.371">
+    <testcase classname="Login Module" name="TC01_User should see login Form if not authenticated" time="7.232">
         <system-out>
             <![CDATA[Given user goes to login page...............................................passed
 Then user assert that Login Form contains username, password and login button.passed
@@ -8,7 +8,7 @@ And user closes the browser.................................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Login Module" name="TC02_User should see validation errors if click the login button without fill the login form" time="5.508">
+    <testcase classname="Login Module" name="TC02_User should see validation errors if click the login button without fill the login form" time="5.29">
         <system-out>
             <![CDATA[Given user goes to login page...............................................passed
 And user clicks login button................................................passed
@@ -17,169 +17,12 @@ And user closes the browser.................................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Login Module" name="TC03_User should navigate to the dashboard and see welcome message if authenticate successfully" time="5.125">
+    <testcase classname="Login Module" name="TC03_User should navigate to the dashboard and see welcome message if authenticate successfully" time="5.422">
         <system-out>
             <![CDATA[Given user goes to login page...............................................passed
 And user enters valid username and password.................................passed
 And user clicks login button................................................passed
 Then user verifies welcome message..........................................passed
-And user closes the browser.................................................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="Event Module" name="TC01_User should view create event form if click the Create Event button on dashboard" time="5.404">
-        <system-out>
-            <![CDATA[Given user goes to login page...............................................passed
-And user enters valid username and password.................................passed
-And user clicks login button................................................passed
-And user clicks create event button.........................................passed
-Then user verifies that create event form is visible........................passed
-And user closes the browser.................................................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="Event Module" name="TC02_User should view validation errors if click the Create Event button without fill the event form" time="7.036">
-        <system-out>
-            <![CDATA[Given user goes to login page...............................................passed
-And user enters valid username and password.................................passed
-And user clicks login button................................................passed
-And user clicks create event button.........................................passed
-Given user clicks Create New Event button...................................passed
-Then user assert that validation errors are visible.........................passed
-And user closes the browser.................................................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="Event Module" name="TC03_User should be able to add new participant when click the Add Participant button" time="5.438">
-        <system-out>
-            <![CDATA[Given user goes to login page...............................................passed
-And user enters valid username and password.................................passed
-And user clicks login button................................................passed
-And user clicks create event button.........................................passed
-And user clicks Add Participant button......................................passed
-Then user verifies that new participant was added...........................passed
-And user closes the browser.................................................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="Event Module" name="TC04_User should view error message if removes all participants" time="6.832">
-        <system-out>
-            <![CDATA[Given user goes to login page...............................................passed
-And user enters valid username and password.................................passed
-And user clicks login button................................................passed
-And user clicks create event button.........................................passed
-And user clicks delete button of all participants...........................passed
-Then user verifies that an error message has occurred.......................passed
-And user closes the browser.................................................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="Event Module" name="TC05_User should be able to create new event if fills all required fields and redirect to dashboard page with create successful message" time="7.167">
-        <system-out>
-            <![CDATA[Given user goes to login page...............................................passed
-And user enters valid username and password.................................passed
-And user clicks login button................................................passed
-And user clicks create event button.........................................passed
-Given user fills all required fields and clicks Create New Event button.....passed
-Then user verifies that redirected to dashboard page........................passed
-And user verifies that create successful message is visible.................passed
-And user closes the browser.................................................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="Event Module" name="TC06_User should be able to edit event. When user click the edit button all event fields must be filled according to editing event" time="7.332">
-        <system-out>
-            <![CDATA[Given user goes to login page...............................................passed
-And user enters valid username and password.................................passed
-And user clicks login button................................................passed
-And user clicks create event button.........................................passed
-Given user fills all required fields and clicks Create New Event button.....passed
-And user clicks edit button.................................................passed
-Then user verifies that all fields are correctly populated compared to the previous one.passed
-And user closes the browser.................................................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="Event Module" name="TC07_User should be able to update event if required fields filled and redirect to dashboard page with update successful message" time="8.998">
-        <system-out>
-            <![CDATA[Given user goes to login page...............................................passed
-And user enters valid username and password.................................passed
-And user clicks login button................................................passed
-And user clicks create event button.........................................passed
-Given user fills all required fields and clicks Create New Event button.....passed
-And user clicks edit button.................................................passed
-Then user updates event name and click Update Event button..................passed
-And user verifies that redirected to dashboard page.........................passed
-And user verifies that update successful message is visible.................passed
-And user closes the browser.................................................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="Dashboard Module" name="TC01_User should view dashboard if authenticated" time="5.479">
-        <system-out>
-            <![CDATA[Given user goes to login page...............................................passed
-And user enters valid username and password.................................passed
-And user clicks login button................................................passed
-Then user verifies that dashboard page has been loaded successfully.........passed
-And user closes the browser.................................................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="Dashboard Module" name="TC02_User should redirect to login page if not authenticated" time="6.087">
-        <system-out>
-            <![CDATA[Given user goes to login page...............................................passed
-And user enters invalid username and password...............................passed
-And user clicks login button................................................passed
-Then user verifies that redirected to login page............................passed
-And user closes the browser.................................................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="Dashboard Module" name="TC03_User should view list of events if any event created otherwise user should view notification message states no registered event found" time="15.123">
-        <system-out>
-            <![CDATA[Given user goes to login page...............................................passed
-And user enters valid username and password.................................passed
-And user clicks login button................................................passed
-Then user verifies that list of events is visible or notification message is visible.passed
-And user closes the browser.................................................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="Dashboard Module" name="TC04_User should be able navigate edit event when click the edit event button" time="8.826">
-        <system-out>
-            <![CDATA[Given user goes to login page...............................................passed
-And user enters valid username and password.................................passed
-And user clicks login button................................................passed
-And user clicks create event button.........................................passed
-Given user fills all required fields and clicks Create New Event button.....passed
-And user clicks edit button.................................................passed
-Then user verifies that navigated to edit event.............................passed
-And user closes the browser.................................................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="Dashboard Module" name="TC05_User should be able to delete event when click the delete button" time="7.521">
-        <system-out>
-            <![CDATA[Given user goes to login page...............................................passed
-And user enters valid username and password.................................passed
-And user clicks login button................................................passed
-And user clicks create event button.........................................passed
-And user fills all required fields and clicks Create New Event button.......passed
-Given user clicks delete button.............................................passed
-Then user verifies that notification message is visible.....................passed
-And user closes the browser.................................................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="Dashboard Module" name="TC06_User should be able to view event participants" time="7.707">
-        <system-out>
-            <![CDATA[Given user goes to login page...............................................passed
-And user enters valid username and password.................................passed
-And user clicks login button................................................passed
-And user clicks create event button.........................................passed
-And user fills all required fields and clicks Create New Event button.......passed
-Given user clicks participant button........................................passed
-Then user verifies that participants of event table is visible..............passed
 And user closes the browser.................................................passed
 ]]>
         </system-out>
